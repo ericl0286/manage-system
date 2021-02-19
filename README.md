@@ -6,7 +6,7 @@
             --本地操作
             git init生成工作区
             git add .添加到暂存区
-            git commit -m "init app" 提交到版本区 (默认是master分支)
+            git commit -m "init app" 提交到版本区 (默认是master分支)  提交更新
 
             --关联远程地址
             git remote add origin https://github.com/ericl0286/manage-system.git
@@ -118,3 +118,34 @@
 ## antd-form
 
 input 也可以写成  prefix={<icon>}的形式 看docs
+
+
+## When top validate Form
+    1.when you are inputing(front-end)
+    2.After you click submit(back-end)
+        问题:Warning: findDOMNode is deprecated in StrictMode. findDOMNode was passed an instance of Wave which is inside StrictMode. Instead, add a ref directly to the element you want to reference. Learn more about using refs safely here: https://fb.me/react-strict-mode-find-node   => 删除<React.StrictMode>  index.js under root file
+    3.validator 自定义 参考docs
+
+
+## 前后台交互
+    1.postman工具区测试后台的api接口是否准确/FEHELPER -postman
+        API 接口信息：url地址，请求方式，参数，响应数据
+        FeHelper:
+        查看示例
+
+    2.API接口正确进入下一步，axios进一步封装发送ajax请求
+        alt+ < 回退
+    3.写一个接口型函数
+
+    4.跨域问题
+        1.协议名不一样http  https
+        2.主机名不一样www.baidu.com   www.sina.com
+        3.端口号不同  
+
+        解决:jsonp只能解决GET请求
+            cros解决
+            代理解决
+
+    5.async await
+        如果不在ajax里面.then 可以在/login里面使用async await 结合try catch来解决 p.23 atguigu
+            以同步编码流程来解决异步问题
